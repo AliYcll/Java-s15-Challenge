@@ -16,7 +16,7 @@ public abstract class Person {
         this.name = name;
     }
 
-//   setter yok çünkü bir kişinin: id’si, adı sistemde değiştirilen şeyler değildir.
+//   setter yok çünkü bir kişinin: id’si ve adı sistemde değiştirilen şeyler değildir.
 
     public int getId() {
         return id;

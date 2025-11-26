@@ -8,8 +8,10 @@ public abstract class Book {
     private BookStatus status;
     private String edition;
     private String dateOfPurchase;
+    private String category;
 
-    public Book(int bookId, String author, String name, double price, BookStatus status, String edition, String dateOfPurchase) {
+
+    public Book(int bookId, String author, String name, double price, BookStatus status, String edition, String dateOfPurchase, String category) {
         this.bookId = bookId;
         this.author = author;
         this.name = name;
@@ -17,6 +19,7 @@ public abstract class Book {
         this.status = status;
         this.edition = edition;
         this.dateOfPurchase = dateOfPurchase;
+        this.category = category;
     }
 
     public int getBookId() {
@@ -47,7 +50,24 @@ public abstract class Book {
         return dateOfPurchase;
     }
 
-    //Book’un türünü alt sınıflar belirleyecek diye abstract metot var.
-    public abstract String getCategory();
+    public String getCategory() {
+        return category;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setStatus(BookStatus status) {
+        this.status = status;
+    }
 
 }

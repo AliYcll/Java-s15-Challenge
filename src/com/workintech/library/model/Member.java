@@ -24,10 +24,24 @@ public class Member extends Person {
         return memberType;
     }
 
-    //limit kontrolü için
+    public void addBorrowedBook(Book book) {
+        borrowedBooks.add(book);
+    }
+
+    public void removeBorrowedBook(Book book) {
+        borrowedBooks.remove(book);
+    }
+
+    //kitap alma limit kontrolü
     public boolean canBorrowMore() {
         return borrowedBooks.size() < MAX_BOOK_LIMIT;
     }
+
+    //kitabı iade et
+    public void returnBook(Book book) {
+        borrowedBooks.remove(book);
+    }
+
 
     @Override
     public String whoYouAre() {

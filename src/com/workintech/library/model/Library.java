@@ -13,7 +13,7 @@ public class Library {
     private Map<Integer, Librarian> librarians;
     private Map<Integer, MemberRecord> records;
     private Map<Integer, Invoice> invoices;
-    private Set<String> categories;
+    private Set<String> categories; //(tekrarsız diye "set")
 
     public Library() {
         this.books = new HashMap<>();
@@ -47,4 +47,6 @@ public class Library {
     public Set<String> getCategories() {
         return categories;
     }
+
+
 }
